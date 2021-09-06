@@ -1,38 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(230deg, #f8485e, #512d6d);
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.inputs {
+  width: 15%;
+}
+
+.inputs input {
+  height: 4vh;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  text-indent: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-weight: bold;
+}
+
+.inputs button {
+  margin-top: 1rem;
+  height: 4vh;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffe194;
+  color: black;
+  font-weight: bold;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all ease-out 0.4s;
+  outline: none;
+}
+
+.inputs button:hover {
+  background-color: #ffb740;
   color: white;
+  transition: all ease-in 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.inputs button:active {
+  width: 95%;
+  transform: translateY(15px);
+  transform: translate(2.5%, 2.5%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.queueList{
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 15%;
+  transition: all ease-in 1s;
+
 }
+
+.queueList p{
+  background-color: #FFF8E5;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.notice{
+  position: absolute;
+  left: 10%;
+  background-color: #E05D5D;
+  width: 15%;
+  height: 4vh;
+  display: grid;
+  place-content: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  font-size: 17px;
+  font-weight: bold;
+  transition: all ease-in 0.4s;
+}
+
+ @media (min-width: 320px) and (max-width:768px) {
+  .inputs {
+    width: 90%;
+  }
+  .queueList{
+    width: 90%;
+    transition: all ease-out 0.4s;  
+  }
+  .notice{
+    width: 90%;
+    bottom: 10%;
+    left: 5%;
+  }
+  
+}
+
+@media (min-width: 769px) and (max-width:1270px) {
+  .inputs {
+    width: 60%;
+  }
+} 
+
